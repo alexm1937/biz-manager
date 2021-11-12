@@ -12,9 +12,9 @@ CREATE TABLE department (
     dept_name VARCHAR(30) NOT NULL
 );
 
-CREATE TABLE roles (
-    role_id INTEGER PRIMARY KEY,
-    role_title VARCHAR(30) NOT NULL,
+CREATE TABLE positions (
+    position_id INTEGER PRIMARY KEY,
+    position_title VARCHAR(30) NOT NULL,
     salary DECIMAL(10,3) NOT NULL,
     dept_id INTEGER,
     CONSTRAINT fk_dept FOREIGN KEY (dept_id) REFERENCES department(dept_id) ON DELETE SET NULL
@@ -24,6 +24,8 @@ CREATE TABLE employees (
     id INTEGER PRIMARY KEY, 
     first_name VARCHAR(30) NOT NULL, 
     last_name VARCHAR(30) NOT NULL,
-    role_id INTEGER
+    position INTEGER
     -- manager_id VARCHAR(30) SELECT 
 );
+
+
