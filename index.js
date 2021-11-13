@@ -86,15 +86,3 @@ setPrompt();
 // REMOVE position
 // REMOVE DEPT
 // VIEW TOTAL UTILIZED BY DEPT
-
-// var startApp = function() {
-//     db.query(
-//         `SELECT * FROM employees`,
-//         function(err, results) {
-//             if(err) throw err;
-//             console.table(results);
-//         }
-//     )
-// }
-// startApp();
-    

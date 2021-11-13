@@ -50,6 +50,8 @@ var addEmployee = function() {
 }
 
 var updateEmployeeRole = function() {
+    // inquirer.prompt({ to display list of employees and select one to update
+    // then take responses and create prepared statement
 }
 module.exports = {addEmployee};
 

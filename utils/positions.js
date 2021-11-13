@@ -2,8 +2,6 @@
 const db = require('../db/connection');
 const inquirer = require('inquirer');
 
-
-
 var getId = function(department) {
     let departmentId;
     if(department === 'Engineering') {
@@ -11,9 +9,7 @@ var getId = function(department) {
     }
 }
 
-
 var addPosition = function() {
-
     inquirer.prompt([
         // propmts for: role name, salary, and department
         {

@@ -1,5 +1,4 @@
 const db = require("../db/connection");
-const mysql = require('mysql2');
 const inquirer = require("inquirer");
 
 var viewAllDept = function() {
@@ -12,6 +11,7 @@ var viewAllDept = function() {
         }
     )
 };
+
 // add dept query
 var addDept = function() {
     // prompt for: name of new dept
