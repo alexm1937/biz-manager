@@ -17,10 +17,20 @@ var addDept = function() {
             ('${deptName}');`,
             function(err, results) {
                 if(err) throw err;
-                console.table(results);
+                console.log('Department successfully created!');
             }
         )
     })
 };
 
-module.exports = { addDept };
+var viewAllDept = function() {
+    db.query(
+        `SELECT * FROM department`,
+        function(err, results) {
+            if(err) throw err;
+            console.table(results);
+            setPrompt();
+        }
+    )
+};
+module.exports = { addDept, viewAllDept };

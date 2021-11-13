@@ -5,7 +5,7 @@ const cTable = require('console.table');
 //imports connection to DB
 const db = require('./db/connection.js')
 //import functions
-const { addDept } = require('./utils/dept');
+const { addDept, viewAllDept } = require('./utils/dept');
 
 db.connect(err=> {
     if(err) throw err;
@@ -24,14 +24,7 @@ const setPrompt = () => {
     })
     .then(({nextPrompt}) => {
         if(nextPrompt === 'View all Departments') {
-            db.query(
-                `SELECT * FROM department`,
-                function(err, results) {
-                    if(err) throw err;
-                    console.table(results);
-                    setPrompt();
-                }
-            )
+            viewAllDept();
         };
         if(nextPrompt === 'View all Positions') {
             db.query(
@@ -68,8 +61,9 @@ setPrompt();
 // VIEW ALL DEPTS
 // VIEW ALL Positions
 // VIEW ALL EMPLOYEES
-
+// NEEDS MORE WORK:
 // ADD DEPT
+
 // ADD position
 // ADD EMP
 // UPDATES EMP ROLE
