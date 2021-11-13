@@ -7,6 +7,7 @@ const db = require('./db/connection.js')
 //import functions
 const { addDept, viewAllDept } = require('./utils/dept');
 const { addEmployee } = require('./utils/employees.js');
+const { addPosition } = require('./utils/positions.js');
 
 db.connect(err=> {
     if(err) throw err;
@@ -21,7 +22,7 @@ const setPrompt = () => {
         type: 'list',
         name: 'nextPrompt',
         message: 'What would you like to do?',
-        choices: ['View all Departments', 'View all Positions', 'View all Employees', 'Add a Department', 'Add an Employee', 'Exit']
+        choices: ['View all Departments', 'View all Positions', 'View all Employees', 'Add a Department', 'Add an Employee', 'Add a Position', 'Exit']
     })
     .then(({nextPrompt}) => {
         if(nextPrompt === 'View all Departments') {
@@ -47,14 +48,17 @@ const setPrompt = () => {
                 }
             )
         };
-        if(nextPrompt === 'exit') {
-            return process.abort();
-        }
         if(nextPrompt === 'Add a Department') {
             addDept();
         }
         if(nextPrompt === 'Add an Employee') {
             addEmployee();
+        }
+        if(nextPrompt === 'Add a Position') {
+            addPosition();
+        }
+        if(nextPrompt === 'exit') {
+            return process.abort();
         }
     })
 };
@@ -67,9 +71,9 @@ setPrompt();
 // VIEW ALL EMPLOYEES
 // NEEDS MORE WORK:
 // ADD DEPT
-
-// ADD position
 // ADD EMP
+// ADD position
+
 // UPDATES EMP ROLE
 
 

@@ -2,6 +2,16 @@ const db = require("../db/connection");
 const mysql = require('mysql2');
 const inquirer = require("inquirer");
 
+var viewAllDept = function() {
+    db.query(
+        `SELECT * FROM department`,
+        function(err, results) {
+            if(err) throw err;
+            console.table(results);
+            setPrompt();
+        }
+    )
+};
 // add dept query
 var addDept = function() {
     // prompt for: name of new dept
@@ -23,14 +33,5 @@ var addDept = function() {
     })
 };
 
-var viewAllDept = function() {
-    db.query(
-        `SELECT * FROM department`,
-        function(err, results) {
-            if(err) throw err;
-            console.table(results);
-            setPrompt();
-        }
-    )
-};
+
 module.exports = { addDept, viewAllDept };

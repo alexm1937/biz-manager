@@ -49,5 +49,7 @@ var addEmployee = function() {
     })
 }
 
+var updateEmployeeRole = function() {
+}
 module.exports = {addEmployee};
 
