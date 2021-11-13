@@ -6,6 +6,7 @@ const cTable = require('console.table');
 const db = require('./db/connection.js')
 //import functions
 const { addDept, viewAllDept } = require('./utils/dept');
+const { addEmployee } = require('./utils/employees.js');
 
 db.connect(err=> {
     if(err) throw err;
@@ -20,7 +21,7 @@ const setPrompt = () => {
         type: 'list',
         name: 'nextPrompt',
         message: 'What would you like to do?',
-        choices: ['View all Departments', 'View all Positions', 'View all Employees', 'Add a Department', 'Exit']
+        choices: ['View all Departments', 'View all Positions', 'View all Employees', 'Add a Department', 'Add an Employee', 'Exit']
     })
     .then(({nextPrompt}) => {
         if(nextPrompt === 'View all Departments') {
@@ -51,6 +52,9 @@ const setPrompt = () => {
         }
         if(nextPrompt === 'Add a Department') {
             addDept();
+        }
+        if(nextPrompt === 'Add an Employee') {
+            addEmployee();
         }
     })
 };

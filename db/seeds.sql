@@ -15,9 +15,8 @@ VALUES
 (5, 'Accountant Teamate', 75000.00, 2),
 (6, 'General Labor', 39500.00, 3);
 
-INSERT INTO employees (id, first_name, last_name, position)
+INSERT INTO employees (first_name, last_name, position)
 VALUES 
-(3, 'alex', 'mcdaniel', 1),
-(2, 'joe', 'butler', 5);
-
+('alex', 'mcdaniel', 1),
+('joe', 'butler', 5);
 
