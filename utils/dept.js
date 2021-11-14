@@ -28,6 +28,7 @@ var addDept = function() {
             function(err, results) {
                 if(err) throw err;
                 console.log('Department successfully created!');
+                // calling setPrompt here returns error 'Is not function'
             }
         )
     })

@@ -50,6 +50,7 @@ const setPrompt = () => {
         };
         if(nextPrompt === 'Add a Department') {
             addDept();
+            // calling setPrompt here also introduces errors and interrupts prompts
         }
         if(nextPrompt === 'Add an Employee') {
             addEmployee();
