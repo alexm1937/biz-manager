@@ -66,7 +66,6 @@ const setPrompt = () => {
                     function(err, results) {
                         if(err) throw err;
                         console.log('Department successfully created!');
-                        // calling setPrompt here returns error 'Is not function'
                     }
                 )
             })
@@ -76,6 +75,21 @@ const setPrompt = () => {
                 let positionId;
                 if(position === 'Lead Engineer') {
                     return positionId = 1; 
+                }
+                if(position === 'Senior Engineer') {
+                    return positionId = 2; 
+                }
+                if(position === 'Junior Engineer') {
+                    return positionId = 3; 
+                }
+                if(position === 'Lead Accountant') {
+                    return positionId = 4; 
+                }
+                if(position === 'Accountant Teamate') {
+                    return positionId = 5; 
+                }
+                if(position === 'General Labor') {
+                    return positionId = 6; 
                 }
             }
             inquirer.prompt([
@@ -120,6 +134,12 @@ const setPrompt = () => {
                 if(department === 'Engineering') {
                     return departmentId = 1; 
                 }
+                if(department === 'Accounting') {
+                    return departmentId = 2; 
+                }
+                if(department === 'Grunts') {
+                    return departmentId = 3; 
+                }
             }
             inquirer.prompt([
                 // propmts for: role name, salary, and department
@@ -159,8 +179,8 @@ const setPrompt = () => {
     })
 };
 
-
 setPrompt();
+
 // EXPECTED: 
 // VIEW ALL DEPTS
 // VIEW ALL Positions
