@@ -66,6 +66,7 @@ const setPrompt = () => {
                     function(err, results) {
                         if(err) throw err;
                         console.log('Department successfully created!');
+                        setPrompt();
                     }
                 )
             })
@@ -124,6 +125,7 @@ const setPrompt = () => {
                     function(err, results) {
                         if(err) throw err;
                         console.log('Employee successfully created!');
+                        setPrompt();
                     }
                 )
             })
@@ -169,6 +171,7 @@ const setPrompt = () => {
                     function(err, results) {
                         if(err) throw err;
                         console.log('Position successfully created!');
+                        setPrompt();
                     }
                 )
             })
