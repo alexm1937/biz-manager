@@ -15,7 +15,8 @@
   First clone my repository. Then in terminal or git bash, navigate to the root folder of the project containing index.js and some other files/subfolders. In the terminal run command npm install. This should install all required dependecies which include mysql2, inquirer, and console.table. 
 
   ## Usage
-  After installing npm dependencies, simply enter the terminal command "npm start"! This will run the application, first creating a connection to the database and then presenting a prompt of options for you to choose from!
+  After installing npm dependencies, simply enter the terminal command "npm start"! This will run the application, first creating a connection to the database and then presenting a prompt of options for you to choose from! Feel free to view my demo video here: 
+  https://watch.screencastify.com/v/kuzti8OPjp89rk1lPKTt
 
   ## Licenses
   Unlicense
